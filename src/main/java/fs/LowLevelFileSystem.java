@@ -54,6 +54,7 @@ public interface LowLevelFileSystem {
    *         bufferStart - bufferEnd + 1
    */
   int syncReadFile(int fd, byte[] bufferBytes, int bufferStart, int bufferEnd);
+  int syncReadFile(int fd, byte[] bufferBytes, int bufferStart, int bufferEnd);
 
   /**
    * Escribe bufferStart - bufferEnd + 1 bytes, a partir de bufferStart
