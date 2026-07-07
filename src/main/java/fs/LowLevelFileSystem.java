@@ -19,6 +19,8 @@ public interface LowLevelFileSystem {
    * @return el descriptor (id) del archivo
    */
   int openFile(String path);
+    int openFile(String path);
+
 
   /**
    * Cierra un archivo.
@@ -63,6 +65,9 @@ public interface LowLevelFileSystem {
    */
   void syncWriteFile(int fd, byte[] bufferBytes, int bufferStart, int bufferEnd);
 
+    void syncWriteFile(int fd, byte[] bufferBytes, int bufferStart, int bufferEnd);
+
+
   /**
    * Similar a {@link #syncReadFile(int, byte[], int, int)}, pero asincrónico.
    * 
@@ -82,4 +87,6 @@ public interface LowLevelFileSystem {
    */
   void asyncReadFile(int fd, byte[] bufferBytes, int bufferStart, int bufferEnd,
       Consumer<Integer> callback);
+        Consumer<Integer> callback);
+
 }
